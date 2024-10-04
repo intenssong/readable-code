@@ -20,7 +20,7 @@ public class LandMineCell implements Cell {
         if(cellState.isOpened()) {
             return LAND_MINE_SIGN;
         }
-        if(cellState.isOpened()){
+        if(cellState.isFlagged()){
             return FLAG_SIGN;
         }
         return UNCHECKED_SIGN;
