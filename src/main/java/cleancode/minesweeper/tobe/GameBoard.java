@@ -151,4 +151,8 @@ public class GameBoard {
                 .toList();
     }
 
+    public CellSnapshot getSnapshot(CellPosition cellPosition) {
+        Cell cell = findCell(cellPosition);
+        return cell.getSnapshot();
+    }
 }
