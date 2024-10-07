@@ -11,7 +11,6 @@ public class CellSnapshot {
         this.nearbyLandMineCount = nearbyLandMineCount;
     }
 
-
     public static CellSnapshot of(CellSnapshotStatus status, int nearbyLandMineCount) {
         return new CellSnapshot(status, nearbyLandMineCount);
     }
@@ -56,5 +55,9 @@ public class CellSnapshot {
     @Override
     public int hashCode() {
         return Objects.hash(status, nearbyLandMineCount);
+    }
+
+    public boolean isSameStatus(CellSnapshotStatus cellSnapshotStatus) {
+        return cellSnapshotStatus == status;
     }
 }
