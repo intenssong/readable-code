@@ -28,12 +28,6 @@ public class StudyCafePassMachine {
                     optionalLockerPass.orElse(null)
             );
             ioHandler.showPassOrderSummary(passOrder);
-            optionalLockerPass.ifPresentOrElse(
-                    lockerpass -> ioHandler.showPassOrderSummary(selectedPass, optionalLockerPass.get()),
-                    () ->ioHandler.showPassOrderSummary(selectedPass)
-            );
-
-
 
         } catch (AppException e) {
             ioHandler.showSimpleMessage(e.getMessage());
